@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7ff;
+  text-align: center;
+}
+
+header {
+  padding: 30px 15px;
+  background: white;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.animals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.animal {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.animal:hover {
+  transform: translateY(-5px);
+}
+
+.emoji {
+  font-size: 70px;
+}
+
+.animal h2 {
+  margin: 10px 0;
+}
+
+.animal p {
+  color: #555;
+  line-height: 1.5;
+}
+
+footer {
+  padding: 20px;
+  background: white;
+  margin-top: 20px;
+}
