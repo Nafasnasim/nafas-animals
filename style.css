@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f7ff;
   text-align: center;
+  color: #222;
 }
 
 header {
@@ -10,8 +11,13 @@ header {
   background: white;
 }
 
-h1 {
+header h1 {
   margin-bottom: 10px;
+}
+
+header p {
+  margin: 6px;
+  color: #555;
 }
 
 .animals {
@@ -28,11 +34,12 @@ h1 {
   padding: 25px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
   transition: transform 0.2s;
 }
 
 .animal:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .emoji {
@@ -46,6 +53,55 @@ h1 {
 .animal p {
   color: #555;
   line-height: 1.5;
+}
+
+/* Information window */
+
+.animal-info {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.animal-info button {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  border: none;
+  background: #eee;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.big-emoji {
+  font-size: 100px;
+}
+
+.animal-info h2 {
+  font-size: 32px;
+  margin: 10px;
+}
+
+.animal-info h3 {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.animal-info p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 footer {
