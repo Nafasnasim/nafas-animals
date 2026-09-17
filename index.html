@@ -8,51 +8,133 @@
 </head>
 
 <body>
+
   <header>
     <h1>🐾 Nafas's Animal World 🐾</h1>
     <p>Discover amazing animals!</p>
+    <p>Click on an animal to learn more!</p>
   </header>
 
   <main class="animals">
-    <div class="animal">
+
+    <div class="animal" onclick="showAnimal('dog')">
       <div class="emoji">🐶</div>
       <h2>Dog</h2>
       <p>A dog is friendly and loyal.</p>
     </div>
 
-    <div class="animal">
+    <div class="animal" onclick="showAnimal('cat')">
       <div class="emoji">🐱</div>
       <h2>Cat</h2>
       <p>A cat is cute, clever and playful.</p>
     </div>
 
-    <div class="animal">
+    <div class="animal" onclick="showAnimal('lion')">
       <div class="emoji">🦁</div>
       <h2>Lion</h2>
       <p>The lion is a strong wild animal.</p>
     </div>
 
-    <div class="animal">
+    <div class="animal" onclick="showAnimal('elephant')">
       <div class="emoji">🐘</div>
       <h2>Elephant</h2>
       <p>Elephants are big and intelligent.</p>
     </div>
 
-    <div class="animal">
+    <div class="animal" onclick="showAnimal('dolphin')">
       <div class="emoji">🐬</div>
       <h2>Dolphin</h2>
       <p>Dolphins are smart sea animals.</p>
     </div>
 
-    <div class="animal">
+    <div class="animal" onclick="showAnimal('butterfly')">
       <div class="emoji">🦋</div>
       <h2>Butterfly</h2>
       <p>Butterflies are beautiful insects.</p>
     </div>
+
   </main>
+
+  <div id="animalInfo" class="animal-info">
+    <button onclick="closeInfo()">✕</button>
+    <div id="infoContent"></div>
+  </div>
 
   <footer>
     <p>Made with ❤️ by Nafas</p>
   </footer>
+
+  <script>
+
+    function showAnimal(animal) {
+
+      const info = {
+
+        dog: `
+          <div class="big-emoji">🐶</div>
+          <h2>Dog</h2>
+          <h3>What is this?</h3>
+          <p>This is a dog.</p>
+          <p>Dogs are kind and friendly.</p>
+          <p>Dogs are domestic animals.</p>
+        `,
+
+        cat: `
+          <div class="big-emoji">🐱</div>
+          <h2>Cat</h2>
+          <h3>What is this?</h3>
+          <p>This is a cat.</p>
+          <p>Cats are cute, clever and playful.</p>
+          <p>Cats are domestic animals.</p>
+        `,
+
+        lion: `
+          <div class="big-emoji">🦁</div>
+          <h2>Lion</h2>
+          <h3>What is this?</h3>
+          <p>This is a lion.</p>
+          <p>Lions are strong and powerful.</p>
+          <p>Lions are wild animals.</p>
+        `,
+
+        elephant: `
+          <div class="big-emoji">🐘</div>
+          <h2>Elephant</h2>
+          <h3>What is this?</h3>
+          <p>This is an elephant.</p>
+          <p>Elephants are big and intelligent.</p>
+          <p>Elephants are wild animals.</p>
+        `,
+
+        dolphin: `
+          <div class="big-emoji">🐬</div>
+          <h2>Dolphin</h2>
+          <h3>What is this?</h3>
+          <p>This is a dolphin.</p>
+          <p>Dolphins are smart and friendly.</p>
+          <p>Dolphins are sea animals.</p>
+        `,
+
+        butterfly: `
+          <div class="big-emoji">🦋</div>
+          <h2>Butterfly</h2>
+          <h3>What is this?</h3>
+          <p>This is a butterfly.</p>
+          <p>Butterflies are beautiful.</p>
+          <p>Butterflies are insects.</p>
+        `
+
+      };
+
+      document.getElementById("infoContent").innerHTML = info[animal];
+      document.getElementById("animalInfo").style.display = "block";
+    }
+
+    function closeInfo() {
+      document.getElementById("animalInfo").style.display = "none";
+    }
+
+  </script>
+
 </body>
 </html>
